@@ -1,8 +1,9 @@
 (
-{ arg amp = -32;
+{
+	arg amp = -32;
 	Dictionary.newFrom([
-		\Batuhan_Bozkurt, (
-		\untuned_note_ascending:
+		\earslap, (
+			\untuned_note_ascending:
 		"(
 Ndef(\\untuned_note_ascending, {
     var x;
@@ -20,7 +21,7 @@ Ndef(\\untuned_note_ascending, {
 )
 Ndef(\\untuned_note_ascending).clear(10)
 ",
-		\repeated_tone_glitch1:
+			\repeated_tone_glitch1:
 		"(
 Ndef(\\repeated_tone_glitch1, {
 	var f=LocalIn.ar(2).tanh;
@@ -39,7 +40,7 @@ Ndef(\\repeated_tone_glitch1, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\repeated_tone_glitch1).clear(10)",
-		\repeated_tone_glitch2:
+			\repeated_tone_glitch2:
 		"(
 Ndef(\\repeated_tone_glitch2, {
 	var f=LocalIn.ar(2).tanh;
@@ -58,7 +59,7 @@ Ndef(\\repeated_tone_glitch2, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\repeated_tone_glitch2).clear(10)",
-		\bass_glitch:
+			\bass_glitch:
 		"(
 Ndef(\\bass_glitch, {
 	AllpassC.ar(
@@ -74,7 +75,7 @@ Ndef(\\bass_glitch, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\bass_glitch).clear(10)",
-		\raining:
+			\raining:
 		"(
 Ndef(\\raining, {
 	Mix({
@@ -92,7 +93,7 @@ Ndef(\\raining, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\raining).clear(10)",
-		\frog_quacking:
+			\frog_quacking:
 		"(
 Ndef(\\frog_quacking, {
 	var a=BPF.ar(
@@ -107,7 +108,7 @@ Ndef(\\frog_quacking, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\frog_quacking).clear(10)",
-		\atonal_rhythmic_accompaniment:
+			\atonal_rhythmic_accompaniment:
 		"(
 Ndef(\\atonal_rhythmic_accompaniment, {
     var x;
@@ -124,7 +125,7 @@ Ndef(\\atonal_rhythmic_accompaniment, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\atonal_rhythmic_accompaniment).clear(10)",
-		\tone_motif:
+			\tone_motif:
 		"(
 Ndef(\\tone_motif, {
 	var p=Impulse.ar(8)*LFNoise1.ar(2);
@@ -140,7 +141,7 @@ Ndef(\\tone_motif, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\tone_motif).clear(10)",
-		\gliding_clusters:
+			\gliding_clusters:
 		"(
 Ndef(\\gliding_clusters, { //10 sec silence after evaluation
 	var x;
@@ -158,7 +159,7 @@ Ndef(\\gliding_clusters, { //10 sec silence after evaluation
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\gliding_clusters).clear(10)",
-		\minimal_patterns:
+			\minimal_patterns:
 		"(
 Ndef(\\minimal_patterns, { //5 sec silence after evaluation
 	var q=[0,3,5,7,10];
@@ -173,7 +174,7 @@ Ndef(\\minimal_patterns, { //5 sec silence after evaluation
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\minimal_patterns).clear(10)",
-		\percussive_pentatonic:
+			\percussive_pentatonic:
 		"(
 Ndef(\\percussive_pentatonic, {
 	var p=[0,3,5,7,10,12]+30;
@@ -187,7 +188,7 @@ Ndef(\\percussive_pentatonic, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\percussive_pentatonic).clear(10)",
-		\percussive_phrygian:
+			\percussive_phrygian:
 		"(
 Ndef(\\percussive_phrygian, {
 	var p=[0,0,0,1,5,7,10,12,12,12]+30;
@@ -201,7 +202,7 @@ Ndef(\\percussive_phrygian, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\percussive_phrygian).clear(10)",
-		\kick_pattern:
+			\kick_pattern:
 		"(
 Ndef(\\kick_pattern, {
 	var x;
@@ -223,7 +224,7 @@ Ndef(\\kick_pattern, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\kick_pattern).clear(10)",
-		\synth_polyrhythms:
+			\synth_polyrhythms:
 		"(
 Ndef(\\synth_polyrhythms, {
 	p=Impulse.kr(1/4);
@@ -237,7 +238,7 @@ Ndef(\\synth_polyrhythms, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_polyrhythms).clear(10)",
-		\glissandi2major:
+			\glissandi2major:
 		"(
 Ndef(\\glissandi2major, {
 	var a;
@@ -258,12 +259,12 @@ Ndef(\\glissandi2major, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\glissandi2major).clear(10)",
-		\happy_cricket:
+			\happy_cricket:
 		"(
 Ndef(\\happy_cricket, {
 	var b;
 	var r=[0,3,5,7,10,12]+40;
-	p=Duty.ar(1/4,0,Drand((r+12++r).midicps,inf));
+	var p=Duty.ar(1/4,0,Drand((r+12++r).midicps,inf));
 	Blip.ar(
 		[b=TRand.ar(1500,2e3,Impulse.ar(16)).lag,b+p],
 		1
@@ -272,7 +273,7 @@ Ndef(\\happy_cricket, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\happy_cricket).clear(10)",
-		\high_morse_noise:
+			\high_morse_noise:
 		"(
 Ndef(\\high_morse_noise, {
 	var n=LFNoise0.kr(_);
@@ -291,7 +292,7 @@ Ndef(\\high_morse_noise, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\high_morse_noise).clear(10)",
-		\big_music_box:
+			\big_music_box:
 		"(
 Ndef(\\big_music_box, {
 	Mix(
@@ -322,7 +323,7 @@ Ndef(\\big_music_box, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\big_music_box).clear(10)",
-		\beat_synth_outbreaks:
+			\beat_synth_outbreaks:
 		"(
 Ndef(\\beat_synth_outbreaks, {
 	var i=Impulse.ar(_);
@@ -342,7 +343,7 @@ Ndef(\\beat_synth_outbreaks, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\beat_synth_outbreaks).clear(10)",
-		\chiptune_overtones:
+			\chiptune_overtones:
 		"(
 Ndef(\\chiptune_overtones, {
 	var k;
@@ -363,7 +364,7 @@ Ndef(\\chiptune_overtones, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\chiptune_overtones).clear(10)",
-		\glitch_marching:
+			\glitch_marching:
 		"(
 Ndef(\\glitch_marching, {
 	var k;
@@ -384,7 +385,7 @@ Ndef(\\glitch_marching, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\glitch_marching).clear(10)",
-		\synth_harmonics_outbreak:
+			\synth_harmonics_outbreak:
 		"(
 Ndef(\\synth_harmonics_outbreak, {
 	var n=LFNoise0.ar(_);
@@ -406,7 +407,7 @@ Ndef(\\synth_harmonics_outbreak, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_harmonics_outbreak).clear(10)",
-		\crackling:
+			\crackling:
 		"(
 Ndef(\\crackling, {
 	var k, y;
@@ -427,7 +428,7 @@ Ndef(\\crackling, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\crackling).clear(10)",
-		\noisy_atonal:
+			\noisy_atonal:
 		"(
 Ndef(\\noisy_atonal, {
 	var i=Impulse.ar(8).lag(0.3)!2;
@@ -447,7 +448,7 @@ Ndef(\\noisy_atonal, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_atonal).clear(10)",
-		\feedback_resonances:
+			\feedback_resonances:
 		"(
 Ndef(\\feedback_resonances, {
 	var n=LFNoise0.kr(*_);
@@ -470,7 +471,7 @@ Ndef(\\feedback_resonances, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\feedback_resonances).clear(10)",
-		\ultra_high_frequencies:
+			\ultra_high_frequencies:
 		"(
 Ndef(\\ultra_high_frequencies, {
 	Blip.ar(
@@ -490,18 +491,18 @@ Ndef(\\ultra_high_frequencies, {
 Ndef(\\ultra_high_frequencies).clear(10)"
 
 	),
-	\block, [
+		\block, [
 		"{SinOsc.ar(65.41,0,(SinOsc.kr(0.5, 0,0.5)))+SinOsc.ar(130.81,0,(SinOsc.kr(10,0,0.5)))+SinOsc.ar(523.25,0,(SinOsc.kr(0.05,0,0.05)))}.play;//b"
 	],
-	\rukano, (
-		\noisy_computer_sounds:
+		\rukano, (
+			\noisy_computer_sounds:
 		"(
 Ndef(\\noisy_computer_sounds, {
 	var a=LFNoise0;
 	var b=FBSineC.ar(
 		a.kr(4,2e4,2e4),
-		a.kr(10,16,17)
-		,1,
+		a.kr(10,16,17),
+        1,
 		1.005,
 		0.7)!2;
 	Latch.ar(
@@ -514,7 +515,7 @@ Ndef(\\noisy_computer_sounds, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_computer_sounds).clear(10)",
-		\dubstep_bass:
+			\dubstep_bass:
 		"(
 Ndef(\\dubstepp_bass, {
 	RLPF.ar(
@@ -533,7 +534,7 @@ Ndef(\\dubstepp_bass, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\dubstepp_bass).clear(10)",
-		\noise_hail:
+			\noise_hail:
 		"(
 Ndef(\\noise_hail, {
 	CombN.ar(
@@ -556,7 +557,7 @@ Ndef(\\noise_hail, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noise_hail).clear(10)",
-		\noisy_meowing:
+			\noisy_meowing:
 		"(
 Ndef(\\noisy_meowing, {
 	var x=LFDNoise3;
@@ -569,7 +570,7 @@ Ndef(\\noisy_meowing, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_meowing).clear(10)",
-		\synth_lead:
+			\synth_lead:
 		"(
 Ndef(\\synth_lead, {
 	var a=[1,1.01,2,2.02,3.5,4.01,5.501];
@@ -585,7 +586,7 @@ Ndef(\\synth_lead, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_lead).clear(10)",
-		\synth_lead2:
+			\synth_lead2:
 		"(
 Ndef(\\synth_lead2, {
 	SinOsc.ar(
@@ -600,7 +601,7 @@ Ndef(\\synth_lead2, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_lead2).clear(10)",
-		\S_O_S:
+			\S_O_S:
 		"(
 Ndef(\\S_O_S, {
 	var cpm=60;
@@ -616,7 +617,7 @@ Ndef(\\S_O_S, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\S_O_S).clear(10)",
-		\noise_metal:
+			\noise_metal:
 		"(
 Ndef(\\noise_metal, {
 	(SinOsc.ar(
@@ -629,7 +630,7 @@ Ndef(\\noise_metal, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noise_metal).clear(10)",
-		\rough_synth:
+			\rough_synth:
 		"(
 Ndef(\\rough_synth, {
 	(SinOsc.ar(
@@ -642,7 +643,7 @@ Ndef(\\rough_synth, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\rough_synth).clear(10)",
-		\sine_melody:
+			\sine_melody:
 		"(
 Ndef(\\sine_melody, {
 	SinOsc.ar(
@@ -655,7 +656,7 @@ Ndef(\\sine_melody, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\sine_melody).clear(10)",
-		\noisy_wind_storm:
+			\noisy_wind_storm:
 		"(
 Ndef(\\noisy_wind_storm, {
 	var x=LFNoise2.kr(22,5,9);
@@ -671,21 +672,23 @@ Ndef(\\noisy_wind_storm, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_wind_storm(10)",
-		\computer_scfi:
+			\computer_scifi:
 		"(
-Ndef(\\computer_scfi, {
+Ndef(\\computer_scifi, {
 	var x=TRand.kr(
 		30,
 		XLine.kr(2e4,30,99,1,1,2),
 		Impulse.kr((1..9))
 	).cpsmidi.round.midicps;
-	Splay.ar(SinOsc.ar(x))*
-	AmpComp.kr(x,10)
+	Splay.ar(
+        SinOsc.ar(x)*
+        AmpComp.kr(x,10)
+    )
 } * " ++ amp ++ ".dbamp
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
-Ndef(\\computer_scfi).clear(10)",
-		\sine_walk_gliss:
+Ndef(\\computer_scifi).clear(10)",
+			\sine_walk_gliss:
 		"(
 Ndef(\\sine_walk_gliss, {
 	fork{
@@ -706,7 +709,7 @@ Ndef(\\sine_walk_gliss, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\sine_walk_gliss).clear(10)",
-		\ascending_crackings:
+			\ascending_crackings:
 		"(
 Ndef(\\ascending_crackings, {
 	RLPF.ar(
@@ -723,7 +726,7 @@ Ndef(\\ascending_crackings, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\ascending_crackings).clear(10)",
-		\tonal_scales:
+			\tonal_scales:
 		"(
 Ndef(\\tonal_scales, {
 	SinOsc.ar(
@@ -737,7 +740,7 @@ Ndef(\\tonal_scales, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\tonal_scales).clear(10)",
-		\accelerated_barrel_hits:
+			\accelerated_barrel_hits:
 		"(
 Ndef(\\accelerated_barrel_hits, {
 	var a=(1,0.97..0.005);
@@ -757,7 +760,7 @@ Ndef(\\accelerated_barrel_hits, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\accelerated_barrel_hits).clear(10)",
-		\hihat_rhythmic_pattern:
+			\hihat_rhythmic_pattern:
 		"(
 Ndef(\\hihat_rhythmic_pattern, {
 	var p=TDuty.kr(Dseq([1,1,4,2,2]/8,inf));
@@ -771,7 +774,7 @@ Ndef(\\hihat_rhythmic_pattern, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\hihat_rhythmic_pattern).clear(10)",
-		\random_sine_harmonics:
+			\random_sine_harmonics:
 		"(
 Ndef(\\random_sine_harmonics, {
 	var p=Impulse.ar((1,1.3..4)/2).sum;
@@ -793,7 +796,7 @@ Ndef(\\random_sine_harmonics, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\random_sine_harmonics).clear(10)",
-		\ragged_sins:
+			\ragged_sins:
 		"(
 Ndef(\\ragged_sins, {
 	SinOsc.ar(
@@ -808,7 +811,7 @@ Ndef(\\ragged_sins, {
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\ragged_sins).clear(10)",
-		\sine_glissandos:
+			\sine_glissandos:
 		"(
 Ndef(\\sine_glissandos, \\setsrc -> Pbind(
     \\dur, 1,
@@ -826,7 +829,7 @@ Ndef(\\sine_glissandos, \\setsrc -> Pbind(
 )).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\sine_glissandos).clear(10)",
-		\rhythmic_drops:
+			\rhythmic_drops:
 		"(
 Ndef(\\rhythmic_drops, {
 	var l=LocalIn.ar+
@@ -843,7 +846,7 @@ Ndef(\\rhythmic_drops, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_drops).clear(10)",
-		\chiptune_accompaniment:
+			\chiptune_accompaniment:
 		"(
 Ndef(\\chiptune_accompaniment, {
 	Splay.ar(
@@ -856,7 +859,7 @@ Ndef(\\chiptune_accompaniment, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chiptune_accompaniment).clear(10)",
-		\chiptune_interlude:
+			\chiptune_interlude:
 		"(
 Ndef(\\chiptune_interlude, {
 	Splay.ar(
@@ -869,7 +872,7 @@ Ndef(\\chiptune_interlude, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chiptune_interlude).clear(10)",
-		\saw_galore:
+			\saw_galore:
 		"(
 Ndef(\\saw_galore, {
 	var l=LFSaw;
@@ -890,7 +893,7 @@ Ndef(\\saw_galore, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\saw_galore).clear(10)",
-		\triangle_galore:
+			\triangle_galore:
 		"(
 Ndef(\\triangle_galore, {
 	var l=LFTri;
@@ -909,7 +912,7 @@ Ndef(\\triangle_galore, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\triangle_galore).clear(10)",
-		\synth_calling:
+			\synth_calling:
 		"(
 Ndef(\\synth_calling, {
 	var o=LFCub.kr(1/[4,7,13,19]);
@@ -922,7 +925,7 @@ Ndef(\\synth_calling, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\synth_calling).clear(10)",
-		\kalimba_polyrhythm:
+			\kalimba_polyrhythm:
 		"(
 Ndef(\\kalimba_polyrhythm, {
 	var e=ExpRand;
@@ -939,7 +942,7 @@ Ndef(\\kalimba_polyrhythm, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\kalimba_polyrhythm0.clear(10)",
-		\beat_gaida:
+			\beat_gaida:
 		"(
 Ndef(\\beat_gaida, {
 	var a=Decay2.ar(
@@ -955,7 +958,7 @@ Ndef(\\beat_gaida, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\beat_gaida).clear(10)",
-		\glitch_rhythmic_machine:
+			\glitch_rhythmic_machine:
 		"(
 Ndef(\\glitch_rhythmic_machine, {
 	var l=LFNoise2;
@@ -974,7 +977,7 @@ Ndef(\\glitch_rhythmic_machine, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_rhythmic_machine).clear(10)",
-		\random_melody:
+			\random_melody:
 		"(
 Ndef(\\random_melody, {
 	var r=LFNoise0.kr(1/4,6,6).round.midiratio;
@@ -987,7 +990,7 @@ Ndef(\\random_melody, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\random_melody).clear(10)",
-		\groove_melody:
+			\groove_melody:
 		"(
 Ndef(\\groove_melody, {
 	var p=TDuty.kr(Dshuf([4,2,1]/8,inf));
@@ -1001,7 +1004,7 @@ Ndef(\\groove_melody, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\groove_melody).clear(10)",
-		\harmonic_drone:
+			\harmonic_drone:
 		"(
 Ndef(\\harmonic_drone, {
 	var l=LFNoise2;
@@ -1020,7 +1023,7 @@ Ndef(\\harmonic_drone, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_drone).clear(10)",
-		\major_rhythmic_ostinato:
+			\major_rhythmic_ostinato:
 		"(
 Ndef(\\major_rhythmic_ostinato, {
 	var f=LFPar.kr(0.22,0,100,150).round(50).lag;
@@ -1033,7 +1036,7 @@ Ndef(\\major_rhythmic_ostinato, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\major_rhythmic_ostinato).clear(10)",
-		\augmented_major:
+			\augmented_major:
 		"(
 Ndef(\\augmented_major, {
 	var i=Impulse;
@@ -1049,7 +1052,7 @@ Ndef(\\augmented_major, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\augmented_major).clear(10)",
-		\fluctuating_sines:
+			\fluctuating_sines:
 		"(
 Ndef(\\fluctuating_sines, {
 	GVerb.ar(
@@ -1068,7 +1071,7 @@ Ndef(\\fluctuating_sines, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\fluctuating_sines).clear(10)",
-		\racing_motors:
+			\racing_motors:
 		"(
 Ndef(\\racing_motors, {
 	var a=0;
@@ -1086,7 +1089,7 @@ Ndef(\\racing_motors, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\racing_motors).clear(10)",
-		\rhythmic_harmonics:
+			\rhythmic_harmonics:
 		"(
 Ndef(\\rhythmic_harmonics, {
 	Splay.ar(
@@ -1103,7 +1106,7 @@ Ndef(\\rhythmic_harmonics, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_harmonics).clear(10)",
-		\alien_spaceship:
+			\alien_spaceship:
 		"(
 Ndef(\\alien_spaceship, {
 	var a=Blip.ar(60,4,LFGauss.ar(4,1/8));
@@ -1115,7 +1118,7 @@ Ndef(\\alien_spaceship, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\alien_spaceship).clear(10)",
-		\minimal_beat:
+			\minimal_beat:
 		"(
 Ndef(\\minimal_beat, {
 	var l=LocalIn.ar(2)+
@@ -1137,7 +1140,7 @@ Ndef(\\minimal_beat, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\minimal_beat).clear(10)",
-		\wind_on_mic:
+			\wind_on_mic:
 		"(
 Ndef(\\wind_on_mic, {
 	LeakDC.ar(
@@ -1155,7 +1158,7 @@ Ndef(\\wind_on_mic, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\wind_on_mic).clear(10)",
-		\chill_pentantonic:
+			\chill_pentantonic:
 		"(
 Ndef(\\chill_pentantonic, {
 	GVerb.ar(
@@ -1174,7 +1177,7 @@ Ndef(\\chill_pentantonic, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chill_pentantonic).clear(10)",
-		\percussive_blops:
+			\percussive_blops:
 		"(
 Ndef(\\percussive_blops, {
 	var f;
@@ -1191,7 +1194,7 @@ Ndef(\\percussive_blops, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\percussive_blops).clear(10)",
-		\harmonic_polyrthythms:
+			\harmonic_polyrthythms:
 		"(
 Ndef(\\harmonic_polyrhythms, {
 	var e=ExpRand;
@@ -1212,8 +1215,8 @@ Ndef(\\harmonic_polyrhythms).clear(10)"
 
 
 	),
-	\mathk, (
-		\crying_babies:
+		\mathk, (
+			\crying_babies:
 		"(
 Ndef(\\crying_babies, {
 	var k=LFNoise1.kr(8.0.rand+2,0.5,0.5);
@@ -1224,7 +1227,7 @@ Ndef(\\crying_babies, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\crying_babies).clear(10)",
-		\major_wandering:
+			\major_wandering:
 		"(
 Ndef(\\major_wandering, {
 	SinOsc.ar([0.501,1,1.001,6.01]*
@@ -1236,7 +1239,7 @@ Ndef(\\major_wandering, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\major_wandering).clear(10)",
-		\inharmonic_hits:
+			\inharmonic_hits:
 		"(
 Ndef(\\inharmonic_hits, {
 	var a=Array.series(7,7,7);
@@ -1250,7 +1253,7 @@ Ndef(\\inharmonic_hits, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\inharmonic_hits).clear(10)",
-		\phasing_saws:
+			\phasing_saws:
 		"(
 Ndef(\\phasing_saws, {
 	RLPF.ar(
@@ -1263,7 +1266,7 @@ Ndef(\\phasing_saws, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\phasing_saws).clear(10)",
-		\ruler_bouncing:
+			\ruler_bouncing:
 		"(
 Ndef(\\ruler_bouncing, {
 	var a=Array.series(33,333.rand+111,11.0.rand+1);
@@ -1274,7 +1277,7 @@ Ndef(\\ruler_bouncing, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\ruler_bouncing).clear(10)",
-		\bubbles:
+			\bubbles:
 		"(
 Ndef(\\bubbles, {
 	BPF.ar(
@@ -1289,7 +1292,7 @@ Ndef(\\bubbles, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\bubbles).clear(10)",
-		\alarm:
+			\alarm:
 		"(
 Ndef(\\alarm, {
 	Klank.ar(
@@ -1302,11 +1305,11 @@ Ndef(\\alarm, {
 )
 Ndef(\\alarm).clear(10)"
 	),
-	\michai, [
+		\michai, [
 		"Ptpar(({|i|[i*8,Pbind(\scale,[0,2,4,7,9],\degree,Pseq(32.fib.fold(0,10),4)+(2*i+i)-10,\dur,1+2**i%2/6)]}!4).flat).play // #supercollider"
 	],
-	\Thor_Magnusson, (
-		\aeolian_strings:
+		\Thor_Magnusson, (
+			\aeolian_strings:
 		"(
 Ndef(\\aeolian_strings,{
 	Mix.fill(
@@ -1326,7 +1329,7 @@ Ndef(\\aeolian_strings,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\aeolian_strings).clear(10)",
-		\arguing_oscs:
+			\arguing_oscs:
 		"(
 Ndef(\\arguing_oscs,{
 	{
@@ -1349,7 +1352,7 @@ Ndef(\\arguing_oscs,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\arguing_oscs).clear(10)",
-		\bon_fire_night:
+			\bon_fire_night:
 		"(
 Ndef(\\bon_fire_night,{
 	var x=Decay;
@@ -1365,7 +1368,7 @@ Ndef(\\bon_fire_night,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\bon_fire_night).clear(10)",
-		\drunk_drummer:
+			\drunk_drummer:
 		"(
 Ndef(\\drunk_drummer,{
 	var i=Dust.ar(4);
@@ -1384,7 +1387,7 @@ Ndef(\\drunk_drummer,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\drunk_drummer).clear(10)",
-		\for_Eliane_Radigue1:
+			\for_Eliane_Radigue1:
 		"(
 Ndef(\\for_Eliane_Radigue1,{
 	{
@@ -1402,7 +1405,7 @@ Ndef(\\for_Eliane_Radigue1,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\for_Eliane_Radigue1).clear(10)",
-		\european_music_study:
+			\european_music_study:
 		"(
 Ndef(\\european_music_study,{
 	var a=Saw;
@@ -1418,7 +1421,7 @@ Ndef(\\european_music_study,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\european_music_study).clear(10)",
-		\frequency_stacking1:
+			\frequency_stacking1:
 		"(
 Ndef(\\frequency_stacking1,{
 	{
@@ -1434,7 +1437,7 @@ Ndef(\\frequency_stacking1,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\frequency_stacking1).clear(10)",
-		\frequency_stacking3:
+			\frequency_stacking3:
 		"(
 Ndef(\\frequency_stacking3,{
 	{
@@ -1450,7 +1453,7 @@ Ndef(\\frequency_stacking3,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\frequency_stacking3).clear(10)",
-		\lynch:
+			\lynch:
 		"(
 Ndef(\\lynch ,{
 	var b=Buffer.read(s,Platform.resourceDir +/+ \"sounds/a11wlk01.wav\");
@@ -1463,7 +1466,7 @@ Ndef(\\lynch ,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\lynch).clear(10)",
-		\for_Eliane_Radigue2:
+			\for_Eliane_Radigue2:
 		"(
 Ndef(\\for_Eliane_Radigue2 ,{
 	{
@@ -1483,7 +1486,7 @@ Ndef(\\for_Eliane_Radigue2 ,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\for_Eliane_Radigue2).clear(10)",
-		\rock_manual:
+			\rock_manual:
 		"(
 Ndef(\\rock_manual ,{
 	var w=WhiteNoise.ar+SinOsc.ar(80,pi/2);
@@ -1498,7 +1501,7 @@ Ndef(\\rock_manual ,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rock_manual).clear(10)",
-		\rosetta_comet:
+			\rosetta_comet:
 		"(
 Ndef(\\rosetta_comet ,{
 	var l=LFNoise2;
@@ -1514,7 +1517,7 @@ Ndef(\\rosetta_comet ,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rosetta_comet).clear(10)",
-		\sleep:
+			\sleep:
 		"(
 Ndef(\\sleep ,{
 	var a=SinOsc.ar(0.15).clip(0,0.3);
@@ -1530,7 +1533,7 @@ Ndef(\\sleep ,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\sleep).clear(10)",
-		\that_nightclub_downstairs:
+			\that_nightclub_downstairs:
 		"(
 Ndef(\\that_nightclub_downstairs ,{
 	var x=SinOsc;
@@ -1548,7 +1551,7 @@ Ndef(\\that_nightclub_downstairs ,{
 ).clock_(t).quant_(1)fadeTime_(10).play;
 )
 Ndef(\\that_nightclub_downstairs).clear(10)",
-		\timpanis:
+			\timpanis:
 		"(
 Ndef(\\timpanis,{
 	{
@@ -1565,7 +1568,7 @@ Ndef(\\timpanis,{
 ).clock_(t).quant_(1)fadeTime_(10).play;
 )
 Ndef(\\timpanis).clear(10)",
-		\txalaparta:
+			\txalaparta:
 		"(
 Ndef(\\txalaparta,{
 	(
@@ -1579,10 +1582,10 @@ Ndef(\\txalaparta,{
 		}!6
 	).sum!2
 } * " ++ amp ++ ".dbamp
-).clock_(t).quant_(1)fadeTime_(10).play;
+).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\txalaparta).clear(10)",
-		\entropic_saw:
+			\entropic_saw:
 		"(
 Ndef(\\entropic_saw,{
 	var n=99;
@@ -1599,11 +1602,11 @@ Ndef(\\entropic_saw,{
 )
 Ndef(\\entropic_saw).clear(10)"
 	),
-	\micromoog, [
+		\micromoog, [
 		"play{LFCub.ar(LFSaw.kr(LFPulse.kr(1/4,1/4,1/4)*2+2,1,-20,50))+(WhiteNoise.ar(LFPulse.kr(4,0,LFPulse.kr(1,3/4)/4+0.05))/8)!2}// #supercollider"
 	],
-	\mutantsounds, (
-		\sine_clusters:
+		\mutantsounds, (
+			\sine_clusters:
 		"(
 Ndef(\\sine_clusters,{
 	Splay.ar(
@@ -1617,7 +1620,7 @@ Ndef(\\sine_clusters,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\sine_clusters).clear(10)",
-		\low_drone:
+			\low_drone:
 		"(
 Ndef(\\low_drone,{
 	var x=Array.fill(3,
@@ -1635,7 +1638,7 @@ Ndef(\\low_drone,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\low_drone).clear(10)",
-		\metallic_high_hits:
+			\metallic_high_hits:
 		"(
 Ndef(\\mettalic_high_hits,{
 	var f=[50,55,5000,10000];
@@ -1659,29 +1662,29 @@ Ndef(\\mettalic_high_hits,{
 Ndef(\\mettalic_high_hits).clear(10)"
 
 	),
-	\Click_Nilson, [
+		\Click_Nilson, [
 		"play{({|i|var n=rrand(3,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(9e2.rand2,e*9%[9,7])}!9).mean} //blurble back into stereo: 135 chars",
 		"play{({|i|var n=rrand(3,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(exprand(9,9e2),(e*99)%9) }!9).mean} //140 char: blurble",
 		"play{({|i|var n=rrand(9,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(exprand(9,9e2),(e*99)%9) }!99).mean} //bells of squelch: 141 char",
 		"play{({|i|var n=rrand(9,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(rrand(9,9e2),(e*99)%9) }!99).mean} //to fit the arbitrary constraint; 139 char bells of squelch"
 	],
-	\Fredrik_Olofsson, [
+		\Fredrik_Olofsson, [
 		"{RHPF.ar(GbmanN.ar([2300,1150]),LFSaw.ar(Pulse.ar(4,[1,2]/8,1,LFPulse.ar(1/8)/5+1))+2)}.play"
 	],
-	\otmiv, [
+		\otmiv, [
 		"{Out.ar([0,1],e=Trig.ar(Dust.ar(10));e=TRand.kr(100,10000,e);e=SinOsc.ar(e).round(SinOsc.ar(Line.kr(0,100,30))))}.play; // #supercollider :D",
 		"play{Splay.ar(Array.fill(15,{Ringz.ar(Dust.ar(Rand(1,10)), Rand(50,9000).round(100), 2)},1,0.5,0))} // #supercollider tweets = good idea!!!"
 	],
-	\jose_henrique_padovani, [
+		\jose_henrique_padovani, [
 		"{120.do{z=1e3;x={rrand(0.1,5)}!8;{{Klank.ar(`[x*z,x/60,2],LFNoise2.ar)*EnvGen.kr(Env.sine(2),doneAction:2)}!2}.play;1.wait;}}.fork",
 		"play{x=165;b=SinOsc;p=Trig.ar(Saw.ar(x),1);y=b.ar(p*x);z=b.ar(p);(GVerb.ar(GrainIn.ar(2,y,y/2,z,p*z,-1),9))/9}//basso gettato #SuperCollider"
 	],
-	\Samuel_Potter, [
+		\Samuel_Potter, [
 		"{var r=SinOsc.ar(1/2,[0,1],3,1),s=Impulse.ar([r+0.2,r]);FreeVerb.ar(Decay.ar(s,r,MoogFF.ar(SinOsc.ar(([r.asin])*50),400)).softclip/2)}.play",
 		"{var d=Demand.kr(Impulse.kr(2),0,LFTri.kr(1,0,2,1));(Ringz.ar(Dust.ar([d,d+1]),d**d,1)+Decay.ar(Impulse.ar(4),0.5,SinOsc.ar(50!2)));}.play"
 	],
-	\Julian_Rohruber, (
-		\electricity:
+		\Julian_Rohruber, (
+			\electricity:
 		"(
 Ndef(\\electricity, {
 	var x = LocalIn.ar(2);
@@ -1693,7 +1696,7 @@ Ndef(\\electricity, {
 )
 Ndef(\\electricity).clear(10)
 ",
-		\chdegaulleabout:
+			\chdegaulleabout:
 		"(
 Ndef(\\chdegaulleabout, {
 	(SinOsc.ar(
@@ -1706,7 +1709,7 @@ Ndef(\\chdegaulleabout, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chdegaulleabout).clear(10)",
-		\sine_stairs:
+			\sine_stairs:
 		"(
 Ndef(\\sine_stairs, {
 	var f={rrand(0.2, 2.0)};
@@ -1721,7 +1724,7 @@ Ndef(\\sine_stairs, {
 )
 Ndef(\\sine_stairs).clear(10)
 ",
-		\noise_wind:
+			\noise_wind:
 		"(
 Ndef(\\noise_wind, {
 	var x = LocalIn.ar(2);
@@ -1737,7 +1740,7 @@ Ndef(\\noise_wind, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\noise_wind).clear(10)",
-		\nasty_engine:
+			\nasty_engine:
 		"(
 Ndef(\\nasty_engine, {
 	var x = LocalIn.ar(2);
@@ -1758,8 +1761,8 @@ Ndef(\\nasty_engine, {
 )
 Ndef(\\nasty_engine).clear(10)"
 	),
-	\Dan_Stowell, (
-		\snare_polyrhythms:
+		\Dan_Stowell, (
+			\snare_polyrhythms:
 		"(
 Ndef(\\snare_polyrhythms,{
 	{PinkNoise.ar*
@@ -1775,7 +1778,7 @@ Ndef(\\snare_polyrhythms,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\snare_polyrhythms).clear(10)",
-		\rhythmic_wipes:
+			\rhythmic_wipes:
 		"(
 Ndef(\\rhythmic_wipes,{
 	var t=HPZ1.kr(LFNoise0.kr(4));
@@ -1787,7 +1790,7 @@ Ndef(\\rhythmic_wipes,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_wipes).clear(10)",
-		\rhythmic_sweeps:
+			\rhythmic_sweeps:
 		"(
 Ndef(\\rhythmic_sweeps,{
 	var i=LFPulse;
@@ -1804,7 +1807,7 @@ Ndef(\\rhythmic_sweeps,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_sweeps).clear(10)",
-		\noise_gradients:
+			\noise_gradients:
 		"(
 Ndef(\\noise_gradients,{
 	var i=SinOsc;
@@ -1819,7 +1822,7 @@ Ndef(\\noise_gradients,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\noise_gradients).clear(10)",
-		\low_high_chip_melody:
+			\low_high_chip_melody:
 		"(
 Ndef(\\low_high_chip_melody,{
 	Pulse.ar(
@@ -1831,7 +1834,7 @@ Ndef(\\low_high_chip_melody,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\low_high_chip_melody).clear(10)",
-		\atonal_arpeggions:
+			\atonal_arpeggions:
 		"(
 Ndef(\\atonal_arpeggios,{
 	var a=[0.02,0.1,1,2,3,4];
@@ -1842,7 +1845,7 @@ Ndef(\\atonal_arpeggios,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\atonal_arpeggios).clear(10)",
-		\bass_riff_to_noise:
+			\bass_riff_to_noise:
 		"(
 Ndef(\\bass_riff_to_noise,{
 	var a=[0.02,0.1,1,2,3,4];
@@ -1854,14 +1857,14 @@ Ndef(\\bass_riff_to_noise,{
 )
 Ndef(\\bass_riff_to_noise).clear(10)"
 	),
-	\superdorch, [
+		\superdorch, [
 			"( play{Out.ar([0,1],LPF.ar(Saw.ar(SinOsc.kr(XLine.kr(9,5000,9),0,20,99),0.7,0),500)*EnvGen.kr(Env.new([0,1,0],[7,1])));}) ) #supercollider"
 	],
-	\Andrea_Valle, [
+		\Andrea_Valle, [
 				"{13.do{|i|k=\"SuperCollider\"[i].ascii;20.do{|u|{MoogFF.ar(Saw.ar((k/4).midicps)*EnvGen.ar(Env.perc),u+k*9,k/30)}.play;(k*0.001).wait}}}.fork // A sombre SuperCollider hymn in 138 chars"
 	],
-	\Nathaniel_Virgo, (
-		\mysterious_atmo:
+		\Nathaniel_Virgo, (
+			\mysterious_atmo:
 		"(
 Ndef(\\mysterious_atmo, {
 	var a=PinkNoise.ar(1!2);
@@ -1876,7 +1879,7 @@ Ndef(\\mysterious_atmo, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\mysterious_atmo).clear(10)",
-		\trash_beat:
+			\trash_beat:
 		"(
 Ndef(\\trash_beat, {
 	var a=LFTri.ar(1);
@@ -1888,7 +1891,7 @@ Ndef(\\trash_beat, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\trash_beat).clear(10)",
-		\synth_accompaniment:
+			\synth_accompaniment:
 		"(
 Ndef(\\synth_accompaniment, {
 	var p={|f,a=1|
@@ -1899,7 +1902,7 @@ Ndef(\\synth_accompaniment, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\synth_accompaniment).clear(10)",
-		\evolving_poppings:
+			\evolving_poppings:
 		"(
 Ndef(\\evolving_poppings, {
 	var a;
@@ -1918,7 +1921,7 @@ Ndef(\\evolving_poppings, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\evolving_poppings).clear(10)",
-		\metallic_rhythms:
+			\metallic_rhythms:
 		"(
 Ndef(\\metallic_rhythms, {
 	var n={|r,f,d=1|2**LFNoise0.kr(1!d,r)*f};
@@ -1934,7 +1937,7 @@ Ndef(\\metallic_rhythms, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\metallic_rhythms).clear(10)",
-		\harmonic_metallic_accompaniment:
+			\harmonic_metallic_accompaniment:
 		"(
 Ndef(\\harmonic_metallic_accompaniment, {
 	var n={|r,f,n=0,d=1|round(
@@ -1952,7 +1955,7 @@ Ndef(\\harmonic_metallic_accompaniment, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_metallic_accompaniment).clear(10)",
-		\walking_in_the_storm:
+			\walking_in_the_storm:
 		"(
 Ndef(\\walking_in_the_storm, {
 	var p=PinkNoise.ar(1!2);
@@ -1968,7 +1971,7 @@ Ndef(\\walking_in_the_storm, {
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\walking_in_the_storm).clear(10)",
-		\hunted_sounds:
+			\hunted_sounds:
 		"(
 Ndef(\\hunted_sounds,{
 	var w;
@@ -1985,7 +1988,7 @@ Ndef(\\hunted_sounds,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\hunted_sounds).clear(10)",
-		\fork_on_guitar:
+			\fork_on_guitar:
 		"(
 Ndef(\\fork_on_guitar,{
 	var x, y;
@@ -2006,7 +2009,7 @@ Ndef(\\fork_on_guitar,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\fork_on_guitar).clear(10)",
-		\glitch_creatures:
+			\glitch_creatures:
 		"(
 Ndef(\\glitch_creatures,{
 	var b=LocalBuf(1e5,2).clear;
@@ -2021,7 +2024,7 @@ Ndef(\\glitch_creatures,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_creatures).clear(10)",
-		\glitch_machines:
+			\glitch_machines:
 		"(
 Ndef(\\glitch_machines,{
 	var b=LocalBuf(4e5,2).clear;
@@ -2040,7 +2043,7 @@ Ndef(\\glitch_machines,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_machines).clear(10)",
-		\blurry_major_sevenths:
+			\blurry_major_sevenths:
 		"(
 Ndef(\\blurry_major_sevenths,{
 	var b=LocalBuf(4e5,2).clear;
@@ -2054,7 +2057,7 @@ Ndef(\\blurry_major_sevenths,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\blurry_major_sevenths).clear(10)",
-		\cascade_of_clips:
+			\cascade_of_clips:
 		"(
 Ndef(\\cascade_of_clips,{
 	var b=LocalBuf(2*SampleRate.ir,2).clear;
@@ -2072,7 +2075,7 @@ Ndef(\\cascade_of_clips,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\cascade_of_clips).clear(10)",
-		\evolving_chiptunes:
+			\evolving_chiptunes:
 		"(
 Ndef(\\evolving_chiptunes,{
 	({|i|
@@ -2083,7 +2086,7 @@ Ndef(\\evolving_chiptunes,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\evolving_chiptunes).clear(10)",
-		\rhythmic_drops:
+			\rhythmic_drops:
 		"(
 Ndef(\\rhythmic_drops,{
 	var x=Splay.ar({|i|
@@ -2097,7 +2100,7 @@ Ndef(\\rhythmic_drops,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_drops).clear(10)",
-		\resonant_tunnel:
+			\resonant_tunnel:
 		"(
 Ndef(\\resonant_tunnel,{
 	var x=Saw.ar([50,50.1]);
@@ -2112,7 +2115,7 @@ Ndef(\\resonant_tunnel,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\resonant_tunnel).clear(10)",
-		\microtonal_ascending:
+			\microtonal_ascending:
 		"(
 Ndef(\\microtonal_ascending,{
 	var p=Impulse;
@@ -2134,8 +2137,8 @@ Ndef(\\microtonal_ascending,{
 Ndef(\\microtonal_ascending).clear(10)"
 
 	),
-	\Tim_Walters, (
-		\scifi_intro:
+		\Tim_Walters, (
+			\scifi_intro:
 		"(
 Ndef(\\scifi_intro,{
 	var y;
@@ -2148,7 +2151,7 @@ Ndef(\\scifi_intro,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\scifi_intro).clear(10)",
-		\glitch_outbursts:
+			\glitch_outbursts:
 		"(
 Ndef(\\glitch_outbursts,{
 	var y;
@@ -2171,7 +2174,7 @@ Ndef(\\glitch_outbursts,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_outbursts).clear(10)",
-		\harmonic_drone1:
+			\harmonic_drone1:
 		"(
 Ndef(\\harmonic_drone1,{
 	var x, y;
@@ -2189,7 +2192,7 @@ Ndef(\\harmonic_drone1,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_drone1).clear(10)",
-		\harmonic_drone2:
+			\harmonic_drone2:
 		"(
 Ndef(\\harmonic_drone2,{
 	({|i|
