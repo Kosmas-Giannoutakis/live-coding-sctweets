@@ -20,7 +20,7 @@ TweetLiveCodingSession {
 
 		var results = [];
 		var date = Date.getDate.format("%d_%m_%Y-%H:%M");
-		var file = File("/home/kosmas/Documents/SuperCollider/Live-Coding_performances/Performance_data-"++date++".txt", "w");
+		var file = File(Platform.userHomeDir ++"/Documents/SuperCollider/Live-Coding_performances/Performance_data-"++date++".txt", "w");
 
 		accumulated_amplitudes.keysValuesDo {
 			|key, value|
