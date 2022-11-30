@@ -17,7 +17,7 @@ Ndef(\\untuned_note_ascending, {
 				a).distort));
 	SplayAz.ar(8, x, 1, 1, 2, 0, 0.5);
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\untuned_note_ascending).clear(10)
 ",
@@ -37,7 +37,7 @@ Ndef(\\repeated_tone_glitch1, {
 			1,k*0.3,100*k));
 	SplayAz.ar(8, f, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\repeated_tone_glitch1).clear(10)",
 			\repeated_tone_glitch2:
@@ -56,7 +56,7 @@ Ndef(\\repeated_tone_glitch2, {
 			1,k*0.3,50*f));
 	SplayAz.ar(8, f, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\repeated_tone_glitch2).clear(10)",
 			\bass_glitch:
@@ -73,7 +73,7 @@ Ndef(\\bass_glitch, {
 		2);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\bass_glitch).clear(10)",
 			\raining:
@@ -92,7 +92,7 @@ Ndef(\\raining, {
 	)}!80).dup;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\raining).clear(10)",
 			\frog_quacking:
@@ -108,7 +108,7 @@ Ndef(\\frog_quacking, {
 		a.abs.lag(1)*100);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\frog_quacking).clear(10)",
 			\atonal_rhythmic_accompaniment:
@@ -126,7 +126,7 @@ Ndef(\\atonal_rhythmic_accompaniment, {
 	x=x.tanh;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\atonal_rhythmic_accompaniment).clear(10)",
 			\tone_motif:
@@ -143,7 +143,7 @@ Ndef(\\tone_motif, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\tone_motif).clear(10)",
 			\gliding_clusters:
@@ -162,7 +162,7 @@ Ndef(\\gliding_clusters, { //10 sec silence after evaluation
 		10,4-(x*4),1-x);
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\gliding_clusters).clear(10)",
 			\minimal_patterns:
@@ -178,7 +178,7 @@ Ndef(\\minimal_patterns, { //5 sec silence after evaluation
 		2)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\minimal_patterns).clear(10)",
 			\percussive_pentatonic:
@@ -193,7 +193,7 @@ Ndef(\\percussive_pentatonic, {
 	)).tanh;
     SplayAz.ar(8, a, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\percussive_pentatonic).clear(10)",
 			\percussive_phrygian:
@@ -208,7 +208,7 @@ Ndef(\\percussive_phrygian, {
 	)).tanh;
     SplayAz.ar(8, a, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\percussive_phrygian).clear(10)",
 			\kick_pattern:
@@ -231,7 +231,7 @@ Ndef(\\kick_pattern, {
 	)).tanh;
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\kick_pattern).clear(10)",
 			\synth_polyrhythms:
@@ -246,7 +246,7 @@ Ndef(\\synth_polyrhythms, {
 	var x=BPF.ar(r.sum,[k,k+0.5],1/9,50).tanh;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_polyrhythms).clear(10)",
 			\glissandi2major:
@@ -268,7 +268,7 @@ Ndef(\\glissandi2major, {
 	)!2*a;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\glissandi2major).clear(10)",
 			\happy_cricket:
@@ -283,7 +283,7 @@ Ndef(\\happy_cricket, {
 	).mean!2**2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\happy_cricket).clear(10)",
 			\high_morse_noise:
@@ -305,7 +305,7 @@ Ndef(\\high_morse_noise, {
     x=tanh(v*99);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\high_morse_noise).clear(10)",
 			\big_music_box:
@@ -337,7 +337,7 @@ Ndef(\\big_music_box, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\big_music_box).clear(10)",
 			\beat_synth_outbreaks:
@@ -358,7 +358,7 @@ Ndef(\\beat_synth_outbreaks, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\beat_synth_outbreaks).clear(10)",
 			\chiptune_overtones:
@@ -380,7 +380,7 @@ Ndef(\\chiptune_overtones, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\chiptune_overtones).clear(10)",
 			\glitch_marching:
@@ -403,7 +403,7 @@ Ndef(\\glitch_marching, {
 	x=k.mean!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\glitch_marching).clear(10)",
 			\synth_harmonics_outbreak:
@@ -426,7 +426,7 @@ Ndef(\\synth_harmonics_outbreak, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_harmonics_outbreak).clear(10)",
 			\crackling:
@@ -448,7 +448,7 @@ Ndef(\\crackling, {
 	x=Splay.ar(k,1-y).sum;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\crackling).clear(10)",
 			\noisy_atonal:
@@ -468,7 +468,7 @@ Ndef(\\noisy_atonal, {
 	};
 	SplayAz.ar(8, i, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_atonal).clear(10)",
 			\feedback_resonances:
@@ -493,7 +493,7 @@ Ndef(\\feedback_resonances, {
 	x=Limiter.ar(v,0.9,1);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\feedback_resonances).clear(10)",
 			\ultra_high_frequencies:
@@ -512,7 +512,7 @@ Ndef(\\ultra_high_frequencies, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\ultra_high_frequencies).clear(10)"
 
@@ -540,7 +540,7 @@ Ndef(\\noisy_computer_sounds, {
 	)*a.kr(5,0.4,0.5);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_computer_sounds).clear(10)",
 			\dubstep_bass:
@@ -560,7 +560,7 @@ Ndef(\\dubstepp_bass, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\dubstepp_bass).clear(10)",
 			\noise_hail:
@@ -584,7 +584,7 @@ Ndef(\\noise_hail, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noise_hail).clear(10)",
 			\noisy_meowing:
@@ -598,7 +598,7 @@ Ndef(\\noisy_meowing, {
 	x.ar(0.5,0.5,0.5);
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_meowing).clear(10)",
 			\synth_lead:
@@ -615,7 +615,7 @@ Ndef(\\synth_lead, {
 	).sum!2/2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_lead).clear(10)",
 			\synth_lead2:
@@ -631,7 +631,7 @@ Ndef(\\synth_lead2, {
 	).sum!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\synth_lead2).clear(10)",
 			\S_O_S:
@@ -648,7 +648,7 @@ Ndef(\\S_O_S, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\S_O_S).clear(10)",
 			\noise_metal:
@@ -662,7 +662,7 @@ Ndef(\\noise_metal, {
 	).sum**3!2).tanh;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noise_metal).clear(10)",
 			\rough_synth:
@@ -676,7 +676,7 @@ Ndef(\\rough_synth, {
 	).sum**3!2).tanh;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\rough_synth).clear(10)",
 			\sine_melody:
@@ -690,7 +690,7 @@ Ndef(\\sine_melody, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\sine_melody).clear(10)",
 			\noisy_wind_storm:
@@ -707,7 +707,7 @@ Ndef(\\noisy_wind_storm, {
 	).tanh;
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\noisy_wind_storm(10)",
 			\computer_scifi:
@@ -724,7 +724,7 @@ Ndef(\\computer_scifi, {
     );
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\computer_scifi).clear(10)",
 			\sine_walk_gliss:
@@ -745,7 +745,7 @@ Ndef(\\sine_walk_gliss, {
 		}
 	}
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\sine_walk_gliss).clear(10)",
 			\ascending_crackings:
@@ -763,7 +763,7 @@ Ndef(\\ascending_crackings, {
 		Line.kr(100,3000,80),0.1)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\ascending_crackings).clear(10)",
 			\tonal_scales:
@@ -778,7 +778,7 @@ Ndef(\\tonal_scales, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\tonal_scales).clear(10)",
 			\accelerated_barrel_hits:
@@ -799,7 +799,7 @@ Ndef(\\accelerated_barrel_hits, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\accelerated_barrel_hits).clear(10)",
 			\hihat_rhythmic_pattern:
@@ -814,7 +814,7 @@ Ndef(\\hihat_rhythmic_pattern, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\hihat_rhythmic_pattern).clear(10)",
 			\random_sine_harmonics:
@@ -837,7 +837,7 @@ Ndef(\\random_sine_harmonics, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\random_sine_harmonics).clear(10)",
 			\ragged_sins:
@@ -853,7 +853,7 @@ Ndef(\\ragged_sins, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play
 )
 Ndef(\\ragged_sins).clear(10)",
 			\sine_glissandos:
@@ -872,7 +872,7 @@ Ndef(\\sine_glissandos, \\setsrc -> Pbind(
 		)
     } * " ++ amp ++ ".dbamp
 )
-).reshaping(\\expanding).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\sine_glissandos).clear(10)",
 			\rhythmic_drops:
@@ -891,7 +891,7 @@ Ndef(\\rhythmic_drops, {
 	x=l!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_drops).clear(10)",
 			\chiptune_accompaniment:
@@ -905,7 +905,7 @@ Ndef(\\chiptune_accompaniment, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chiptune_accompaniment).clear(10)",
 			\chiptune_interlude:
@@ -919,7 +919,7 @@ Ndef(\\chiptune_interlude, {
 	).lag(LFCub.kr(1/8,0.001,0.003));
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chiptune_interlude).clear(10)",
 			\saw_galore:
@@ -941,7 +941,7 @@ Ndef(\\saw_galore, {
 	)/2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\saw_galore).clear(10)",
 			\triangle_galore:
@@ -961,7 +961,7 @@ Ndef(\\triangle_galore, {
 	).sum!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\triangle_galore).clear(10)",
 			\synth_calling:
@@ -975,7 +975,7 @@ Ndef(\\synth_calling, {
 		o@1,o[0]*0.1+0.1)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\synth_calling).clear(10)",
 			\kalimba_polyrhythm:
@@ -993,7 +993,7 @@ Ndef(\\kalimba_polyrhythm, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\kalimba_polyrhythm0.clear(10)",
 			\beat_gaida:
@@ -1010,7 +1010,7 @@ Ndef(\\beat_gaida, {
 	)+a;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\beat_gaida).clear(10)",
 			\glitch_rhythmic_machine:
@@ -1030,7 +1030,7 @@ Ndef(\\glitch_rhythmic_machine, {
 	).fold2!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_rhythmic_machine).clear(10)",
 			\random_melody:
@@ -1044,7 +1044,7 @@ Ndef(\\random_melody, {
 	}!40);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\random_melody).clear(10)",
 			\groove_melody:
@@ -1059,7 +1059,7 @@ Ndef(\\groove_melody, {
 		c.kr(p,[-0.5,0,0.5]).lag);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\groove_melody).clear(10)",
 			\harmonic_drone:
@@ -1079,7 +1079,7 @@ Ndef(\\harmonic_drone, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_drone).clear(10)",
 			\major_rhythmic_ostinato:
@@ -1093,7 +1093,7 @@ Ndef(\\major_rhythmic_ostinato, {
 	).lag;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\major_rhythmic_ostinato).clear(10)",
 			\augmented_major:
@@ -1110,7 +1110,7 @@ Ndef(\\augmented_major, {
 	).flop.sum*4;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\augmented_major).clear(10)",
 			\fluctuating_sines:
@@ -1130,7 +1130,7 @@ Ndef(\\fluctuating_sines, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\fluctuating_sines).clear(10)",
 			\racing_motors:
@@ -1148,7 +1148,7 @@ Ndef(\\racing_motors, {
 	)};
 	SplayAz.ar(8, a, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\racing_motors).clear(10)",
 			\rhythmic_harmonics:
@@ -1166,7 +1166,7 @@ Ndef(\\rhythmic_harmonics, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_harmonics).clear(10)",
 			\alien_spaceship:
@@ -1178,7 +1178,7 @@ Ndef(\\alien_spaceship, {
 	LocalOut.ar(DelayC.ar(a,1,0.1,0.9));
 	SplayAz.ar(8, a, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\alien_spaceship).clear(10)",
 			\minimal_beat:
@@ -1200,7 +1200,7 @@ Ndef(\\minimal_beat, {
 	);
 	SplayAz.ar(8, l, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\minimal_beat).clear(10)",
 			\wind_on_mic:
@@ -1219,7 +1219,7 @@ Ndef(\\wind_on_mic, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\wind_on_mic).clear(10)",
 			\chill_pentantonic:
@@ -1239,7 +1239,7 @@ Ndef(\\chill_pentantonic, {
 	).sum,200,3)/20;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chill_pentantonic).clear(10)",
 			\percussive_blops:
@@ -1257,7 +1257,7 @@ Ndef(\\percussive_blops, {
 		9,0.5)).flop.sum;
     SplayAz.ar(8, y 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\percussive_blops).clear(10)",
 			\harmonic_polyrthythms:
@@ -1275,7 +1275,7 @@ Ndef(\\harmonic_polyrhythms, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_polyrhythms).clear(10)"
 
@@ -1293,7 +1293,7 @@ Ndef(\\crying_babies, {
 	).sum.cubed * 0.1;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\crying_babies).clear(10)",
 			\major_wandering:
@@ -1306,7 +1306,7 @@ Ndef(\\major_wandering, {
 		0,0.25).sum.clip(-0.6,0.6).cubed.dup;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\major_wandering).clear(10)",
 			\inharmonic_hits:
@@ -1321,7 +1321,7 @@ Ndef(\\inharmonic_hits, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\inharmonic_hits).clear(10)",
 			\phasing_saws:
@@ -1335,7 +1335,7 @@ Ndef(\\phasing_saws, {
 	).clip(-0.8,0.3);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\phasing_saws).clear(10)",
 			\ruler_bouncing:
@@ -1347,7 +1347,7 @@ Ndef(\\ruler_bouncing, {
 	).clip(0,1);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\ruler_bouncing).clear(10)",
 			\bubbles:
@@ -1363,7 +1363,7 @@ Ndef(\\bubbles, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\bubbles).clear(10)",
 			\alarm:
@@ -1376,7 +1376,7 @@ Ndef(\\alarm, {
 	)/4!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\alarm).clear(10)"
 	),
@@ -1402,7 +1402,7 @@ Ndef(\\aeolian_strings,{
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\aeolian_strings).clear(10)",
 			\arguing_oscs:
@@ -1426,7 +1426,7 @@ Ndef(\\arguing_oscs,{
 	}!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\arguing_oscs).clear(10)",
 			\bon_fire_night:
@@ -1443,7 +1443,7 @@ Ndef(\\bon_fire_night,{
 	);
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\bon_fire_night).clear(10)",
 			\drunk_drummer:
@@ -1463,7 +1463,7 @@ Ndef(\\drunk_drummer,{
 	)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\drunk_drummer).clear(10)",
 			\for_Eliane_Radigue1:
@@ -1482,7 +1482,7 @@ Ndef(\\for_Eliane_Radigue1,{
 	).sum}!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\for_Eliane_Radigue1).clear(10)",
 			\european_music_study:
@@ -1499,7 +1499,7 @@ Ndef(\\european_music_study,{
 	)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\european_music_study).clear(10)",
 			\frequency_stacking1:
@@ -1516,7 +1516,7 @@ Ndef(\\frequency_stacking1,{
 	}!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\frequency_stacking1).clear(10)",
 			\frequency_stacking3:
@@ -1547,7 +1547,7 @@ Ndef(\\lynch ,{
 	var x=GVerb.ar(o);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\lynch).clear(10)",
 			\for_Eliane_Radigue2:
@@ -1568,7 +1568,7 @@ Ndef(\\for_Eliane_Radigue2 ,{
 	}!2;
     SplayAz.ar(8, w, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\for_Eliane_Radigue2).clear(10)",
 			\rock_manual:
@@ -1584,7 +1584,7 @@ Ndef(\\rock_manual ,{
 	*w)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rock_manual).clear(10)",
 			\rosetta_comet:
@@ -1601,7 +1601,7 @@ Ndef(\\rosetta_comet ,{
 	)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rosetta_comet).clear(10)",
 			\sleep:
@@ -1618,7 +1618,7 @@ Ndef(\\sleep ,{
 	)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\sleep).clear(10)",
 			\that_nightclub_downstairs:
@@ -1637,7 +1637,7 @@ Ndef(\\that_nightclub_downstairs ,{
 	)!2/3;
     SplayAz.ar(8, b, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1)fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1)fadeTime_(10).play;
 )
 Ndef(\\that_nightclub_downstairs).clear(10)",
 			\timpanis:
@@ -1655,7 +1655,7 @@ Ndef(\\timpanis,{
 	}!2;
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1)fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1)fadeTime_(10).play;
 )
 Ndef(\\timpanis).clear(10)",
 			\txalaparta:
@@ -1673,7 +1673,7 @@ Ndef(\\txalaparta,{
 	).sum!2;
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\txalaparta).clear(10)",
 			\entropic_saw:
@@ -1690,7 +1690,7 @@ Ndef(\\entropic_saw,{
 	}!2;
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\entropic_saw).clear(10)"
 	),
@@ -1710,7 +1710,7 @@ Ndef(\\sine_clusters,{
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\sine_clusters).clear(10)",
 			\low_drone:
@@ -1729,7 +1729,7 @@ Ndef(\\low_drone,{
 	);
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\low_drone).clear(10)",
 			\metallic_high_hits:
@@ -1752,7 +1752,7 @@ Ndef(\\mettalic_high_hits,{
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\mettalic_high_hits).clear(10)"
 
@@ -1787,7 +1787,7 @@ Ndef(\\electricity, {
 	LocalOut.ar(y);
 	SplayAz.ar(8, y, 1, 1, 2, 0, 0.5);
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\electricity).clear(10)
 ",
@@ -1802,7 +1802,7 @@ Ndef(\\chdegaulleabout, {
 	).mean)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\chdegaulleabout).clear(10)",
 			\sine_stairs:
@@ -1817,7 +1817,7 @@ Ndef(\\sine_stairs, {
 	)*0.1;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\sine_stairs).clear(10)
 ",
@@ -1834,7 +1834,7 @@ Ndef(\\noise_wind, {
 	LocalOut.ar(y);
 	SplayAz.ar(8, y, 1, 1, 2, 0, 0.5);
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\noise_wind).clear(10)",
 			\nasty_engine:
@@ -1854,7 +1854,7 @@ Ndef(\\nasty_engine, {
 	LocalOut.ar(y);
 	SplayAz.ar(8, y, 1, 1, 2, 0, 0.5);
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\nasty_engine).clear(10)"
 	),
@@ -1873,7 +1873,7 @@ Ndef(\\snare_polyrhythms,{
 	}.dup;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\snare_polyrhythms).clear(10)",
 			\rhythmic_wipes:
@@ -1886,7 +1886,7 @@ Ndef(\\rhythmic_wipes,{
 	)*0.1;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_wipes).clear(10)",
 			\rhythmic_sweeps:
@@ -1904,7 +1904,7 @@ Ndef(\\rhythmic_sweeps,{
 	)/9;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_sweeps).clear(10)",
 			\noise_gradients:
@@ -1920,7 +1920,7 @@ Ndef(\\noise_gradients,{
 	}!9);
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\noise_gradients).clear(10)",
 			\low_high_chip_melody:
@@ -1933,7 +1933,7 @@ Ndef(\\low_high_chip_melody,{
 	)!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\low_high_chip_melody).clear(10)",
 			\atonal_arpeggions:
@@ -1945,7 +1945,7 @@ Ndef(\\atonal_arpeggios,{
 	var x=Splay.ar(SinOsc.ar(f*100+300)/5);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\atonal_arpeggios).clear(10)",
 			\bass_riff_to_noise:
@@ -1957,7 +1957,7 @@ Ndef(\\bass_riff_to_noise,{
 	var x=Splay.ar(SinOsc.ar(f*100+300)/5);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\bass_riff_to_noise).clear(10)"
 	),
@@ -1982,7 +1982,7 @@ Ndef(\\mysterious_atmo, {
 	x=LPF.ar(a,1e5);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\mysterious_atmo).clear(10)",
 			\trash_beat:
@@ -1996,7 +1996,7 @@ Ndef(\\trash_beat, {
 	x=a*0.1!2;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\trash_beat).clear(10)",
 			\synth_accompaniment:
@@ -2008,7 +2008,7 @@ Ndef(\\synth_accompaniment, {
 	+p.(100-p.(1/8,20),p.(8))*0.1;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\synth_accompaniment).clear(10)",
 			\evolving_poppings:
@@ -2027,7 +2027,7 @@ Ndef(\\evolving_poppings, {
 	);
 	SplayAz.ar(8, a, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\evolving_poppings).clear(10)",
 			\metallic_rhythms:
@@ -2044,7 +2044,7 @@ Ndef(\\metallic_rhythms, {
 	};
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\metallic_rhythms).clear(10)",
 			\harmonic_metallic_accompaniment:
@@ -2063,7 +2063,7 @@ Ndef(\\harmonic_metallic_accompaniment, {
 	)};
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_metallic_accompaniment).clear(10)",
 			\walking_in_the_storm:
@@ -2080,7 +2080,7 @@ Ndef(\\walking_in_the_storm, {
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\walking_in_the_storm).clear(10)",
 			\hunted_sounds:
@@ -2097,7 +2097,7 @@ Ndef(\\hunted_sounds,{
 	LocalOut.ar(Mix.ar(w));
 	SplayAz.ar(8, w, 1, 1, 2, 0, 0.5);
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\hunted_sounds).clear(10)",
 			\fork_on_guitar:
@@ -2118,7 +2118,7 @@ Ndef(\\fork_on_guitar,{
 	LocalOut.ar(y);
 	SplayAz.ar(8, y, 1, 1, 2, 0, 0.5);
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\fork_on_guitar).clear(10)",
 			\glitch_creatures:
@@ -2133,7 +2133,7 @@ Ndef(\\glitch_creatures,{
 		1*5e4);
 	SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_creatures).clear(10)",
 			\glitch_machines:
@@ -2153,7 +2153,7 @@ Ndef(\\glitch_machines,{
 	)/10;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_machines).clear(10)",
 			\blurry_major_sevenths:
@@ -2168,7 +2168,7 @@ Ndef(\\blurry_major_sevenths,{
 		Blip.ar([20,21],1),2,40)/20;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\blurry_major_sevenths).clear(10)",
 			\cascade_of_clips:
@@ -2187,7 +2187,7 @@ Ndef(\\cascade_of_clips,{
 	);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\cascade_of_clips).clear(10)",
 			\evolving_chiptunes:
@@ -2199,7 +2199,7 @@ Ndef(\\evolving_chiptunes,{
 		Pulse.ar(Duty.ar(1/8,0,Dbufwr(x,b,i))*20)}!5).mean!2;
     SplayAz.ar(8, y, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\evolving_chiptunes).clear(10)",
 			\rhythmic_drops:
@@ -2213,7 +2213,7 @@ Ndef(\\rhythmic_drops,{
 	2.do{x=FreeVerb2.ar(*x++[0.1,1,1])};
 	SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\rhythmic_drops).clear(10)",
 			\resonant_tunnel:
@@ -2228,7 +2228,7 @@ Ndef(\\resonant_tunnel,{
 	};
 	SplayAz.ar(8, x, 1, 1, 2, 0, 0.5);
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\resonant_tunnel).clear(10)",
 			\microtonal_ascending:
@@ -2249,7 +2249,7 @@ Ndef(\\microtonal_ascending,{
 	}!10);
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\microtonal_ascending).clear(10)"
 
@@ -2266,7 +2266,7 @@ Ndef(\\scifi_intro,{
 	).sum}!16).sum,1)/512;
     SplayAz.ar(8, w, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\scifi_intro).clear(10)",
 			\glitch_outbursts:
@@ -2290,7 +2290,7 @@ Ndef(\\glitch_outbursts,{
 	).product}!16).sum;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\glitch_outbursts).clear(10)",
 			\harmonic_drone1:
@@ -2309,7 +2309,7 @@ Ndef(\\harmonic_drone1,{
 	).sum/4;
     SplayAz.ar(8, w, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_drone1).clear(10)",
 			\harmonic_drone2:
@@ -2324,7 +2324,7 @@ Ndef(\\harmonic_drone2,{
 	}!8).sum/4;
     SplayAz.ar(8, x, 1, 1, 2, 0, 0.5)
 } * " ++ amp ++ ".dbamp
-).reshaping(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
+).reshaping_(\\expanding).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\harmonic_drone2).clear(10)"
 	)
