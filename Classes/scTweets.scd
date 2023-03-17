@@ -491,9 +491,6 @@ Ndef(\\ultra_high_frequencies, {
 Ndef(\\ultra_high_frequencies).clear(10)"
 
 	),
-		\block, [
-		"{SinOsc.ar(65.41,0,(SinOsc.kr(0.5, 0,0.5)))+SinOsc.ar(130.81,0,(SinOsc.kr(10,0,0.5)))+SinOsc.ar(523.25,0,(SinOsc.kr(0.05,0,0.05)))}.play;//b"
-	],
 		\rukano, (
 			\noisy_computer_sounds:
 		"(
@@ -517,7 +514,7 @@ Ndef(\\noisy_computer_sounds, {
 Ndef(\\noisy_computer_sounds).clear(10)",
 			\dubstep_bass:
 		"(
-Ndef(\\dubstepp_bass, {
+Ndef(\\dubstep_bass, {
 	RLPF.ar(
 		Latch.ar(
 			SinOsc.ar([100,100.5])!2,
@@ -529,11 +526,11 @@ Ndef(\\dubstepp_bass, {
 				)
 			)
 		), 800
-	)
+	).sum
 } * " ++ amp ++ ".dbamp
 ).clock_(t).quant_(1).fadeTime_(10).play
 )
-Ndef(\\dubstepp_bass).clear(10)",
+Ndef(\\dubstep_bass).clear(10)",
 			\noise_hail:
 		"(
 Ndef(\\noise_hail, {
@@ -1305,9 +1302,6 @@ Ndef(\\alarm, {
 )
 Ndef(\\alarm).clear(10)"
 	),
-		\michai, [
-		"Ptpar(({|i|[i*8,Pbind(\scale,[0,2,4,7,9],\degree,Pseq(32.fib.fold(0,10),4)+(2*i+i)-10,\dur,1+2**i%2/6)]}!4).flat).play // #supercollider"
-	],
 		\Thor_Magnusson, (
 			\aeolian_strings:
 		"(
@@ -1565,7 +1559,7 @@ Ndef(\\timpanis,{
 			Env.perc(0.001,5),x)
 	}!2
 } * " ++ amp ++ ".dbamp
-).clock_(t).quant_(1)fadeTime_(10).play;
+).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\timpanis).clear(10)",
 			\txalaparta:
@@ -1602,9 +1596,6 @@ Ndef(\\entropic_saw,{
 )
 Ndef(\\entropic_saw).clear(10)"
 	),
-		\micromoog, [
-		"play{LFCub.ar(LFSaw.kr(LFPulse.kr(1/4,1/4,1/4)*2+2,1,-20,50))+(WhiteNoise.ar(LFPulse.kr(4,0,LFPulse.kr(1,3/4)/4+0.05))/8)!2}// #supercollider"
-	],
 		\mutantsounds, (
 			\sine_clusters:
 		"(
@@ -1662,27 +1653,6 @@ Ndef(\\mettalic_high_hits,{
 Ndef(\\mettalic_high_hits).clear(10)"
 
 	),
-		\Click_Nilson, [
-		"play{({|i|var n=rrand(3,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(9e2.rand2,e*9%[9,7])}!9).mean} //blurble back into stereo: 135 chars",
-		"play{({|i|var n=rrand(3,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(exprand(9,9e2),(e*99)%9) }!9).mean} //140 char: blurble",
-		"play{({|i|var n=rrand(9,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(exprand(9,9e2),(e*99)%9) }!99).mean} //bells of squelch: 141 char",
-		"play{({|i|var n=rrand(9,99),e=EnvGen.ar(Env({1.0.rand2**3}!n,{exprand(1e-4,1)}!(n-1),i,n-2,0));e*Blip.ar(rrand(9,9e2),(e*99)%9) }!99).mean} //to fit the arbitrary constraint; 139 char bells of squelch"
-	],
-		\Fredrik_Olofsson, [
-		"{RHPF.ar(GbmanN.ar([2300,1150]),LFSaw.ar(Pulse.ar(4,[1,2]/8,1,LFPulse.ar(1/8)/5+1))+2)}.play"
-	],
-		\otmiv, [
-		"{Out.ar([0,1],e=Trig.ar(Dust.ar(10));e=TRand.kr(100,10000,e);e=SinOsc.ar(e).round(SinOsc.ar(Line.kr(0,100,30))))}.play; // #supercollider :D",
-		"play{Splay.ar(Array.fill(15,{Ringz.ar(Dust.ar(Rand(1,10)), Rand(50,9000).round(100), 2)},1,0.5,0))} // #supercollider tweets = good idea!!!"
-	],
-		\jose_henrique_padovani, [
-		"{120.do{z=1e3;x={rrand(0.1,5)}!8;{{Klank.ar(`[x*z,x/60,2],LFNoise2.ar)*EnvGen.kr(Env.sine(2),doneAction:2)}!2}.play;1.wait;}}.fork",
-		"play{x=165;b=SinOsc;p=Trig.ar(Saw.ar(x),1);y=b.ar(p*x);z=b.ar(p);(GVerb.ar(GrainIn.ar(2,y,y/2,z,p*z,-1),9))/9}//basso gettato #SuperCollider"
-	],
-		\Samuel_Potter, [
-		"{var r=SinOsc.ar(1/2,[0,1],3,1),s=Impulse.ar([r+0.2,r]);FreeVerb.ar(Decay.ar(s,r,MoogFF.ar(SinOsc.ar(([r.asin])*50),400)).softclip/2)}.play",
-		"{var d=Demand.kr(Impulse.kr(2),0,LFTri.kr(1,0,2,1));(Ringz.ar(Dust.ar([d,d+1]),d**d,1)+Decay.ar(Impulse.ar(4),0.5,SinOsc.ar(50!2)));}.play"
-	],
 		\Julian_Rohruber, (
 			\electricity:
 		"(
@@ -1834,7 +1804,7 @@ Ndef(\\low_high_chip_melody,{
 ).clock_(t).quant_(1).fadeTime_(10).play;
 )
 Ndef(\\low_high_chip_melody).clear(10)",
-			\atonal_arpeggions:
+			\atonal_arpeggios:
 		"(
 Ndef(\\atonal_arpeggios,{
 	var a=[0.02,0.1,1,2,3,4];
@@ -1848,22 +1818,24 @@ Ndef(\\atonal_arpeggios).clear(10)",
 			\bass_riff_to_noise:
 		"(
 Ndef(\\bass_riff_to_noise,{
-	var a=[0.02,0.1,1,2,3,4];
-	var k=LFPar.kr(a+0.5).sum;
-	var f=Latch.kr(k,Impulse.kr(a));
-	Splay.ar(SinOsc.ar(f*100+300)/5)
+	a=Duty.kr(
+		0.1,0,Dseq(fib(32).wrap(20,55).midicps,inf)
+	);
+	HPF.ar(
+		LeakDC.ar(
+			Splay.ar(
+				LFCub.ar([-1,a,a/3,-2]
+				)
+			)
+		)*9
+
+	).clip2/9
 } * " ++ amp ++ ".dbamp
-).clock_(t).quant_(1).fadeTime_(10).play;
+).clock_(t).quant_(1).fadeTime_(1).play;
 )
-Ndef(\\bass_riff_to_noise).clear(10)"
-	),
-		\superdorch, [
-			"( play{Out.ar([0,1],LPF.ar(Saw.ar(SinOsc.kr(XLine.kr(9,5000,9),0,20,99),0.7,0),500)*EnvGen.kr(Env.new([0,1,0],[7,1])));}) ) #supercollider"
-	],
-		\Andrea_Valle, [
-				"{13.do{|i|k=\"SuperCollider\"[i].ascii;20.do{|u|{MoogFF.ar(Saw.ar((k/4).midicps)*EnvGen.ar(Env.perc),u+k*9,k/30)}.play;(k*0.001).wait}}}.fork // A sombre SuperCollider hymn in 138 chars"
-	],
-		\Nathaniel_Virgo, (
+Ndef(\\bass_riff_to_noise).clear(10)",
+		),
+		\headcube, (
 			\mysterious_atmo:
 		"(
 Ndef(\\mysterious_atmo, {
