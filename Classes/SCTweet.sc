@@ -5,7 +5,7 @@ SCTweet : TweetLiveCodingSession {
 		arg composer, tweet, amp= -32;
 		var bus, current_document, tweets_dictionary, accumulated_amplitudes;
 
-		tweets_dictionary = "scTweets.scd".resolveRelative.load;
+		tweets_dictionary = "scTweets-fb.scd".resolveRelative.load;
 		accumulated_amplitudes = super.returnDictionary;
 
 		if (accumulated_amplitudes.includesKey([composer.asSymbol, tweet.asSymbol]).not) {
@@ -41,7 +41,7 @@ SCTweet : TweetLiveCodingSession {
 		arg composer, amp = -32;
 		var bus, current_document, accumulated_amplitudes;
 
-		var tweets_dictionary = "scTweets.scd".resolveRelative.load;
+		var tweets_dictionary = "scTweets-fb.scd".resolveRelative.load;
 		var keysComposer, sizeComposer, randComposer;
 
 		var keysTweets, sizeTweets, randTweet;
